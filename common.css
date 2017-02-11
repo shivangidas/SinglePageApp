@@ -1,0 +1,73 @@
+body{
+	font-family: 'Lato', sans-serif;
+}
+.nav{
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+.hero .nav{
+	background:#fff;
+}
+#aboutUs{
+	margin-top: 49px;
+}
+#aboutUs, #pricing{
+	background:black;
+	color:#b5b5b5;
+}
+#aboutUs .title, #pricing .title{
+	color:#f5f5f5;
+}
+#aboutUs .subtitle, #pricing .subtitle{
+	color:#b5b5b5;
+}
+#projects .column{
+    color: #4a4a4a;
+    margin: 2em 2em;
+}
+.contact-icons a{
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+@media screen and (max-width: 400px){
+	.contact-icons{
+	padding-left: 0em;
+	padding-right: 0em;
+	}
+}
+@media screen and (max-width: 768px)
+{
+	footer .nav-item{
+		justify-content: center;
+	}
+}
+/*Flipping action on desktop*/
+@media screen and (min-width: 769px){
+	.cardColumn{
+	position: relative; perspective: 800px;
+	}
+	.myCard{
+		width: 100%;  
+		height: 100%;  
+		position: absolute;
+		transform-style: preserve-3d;
+		transition: transform 1s;
+	}
+	.myCard .back{
+		transform: rotateY( 180deg );
+	}
+	.myCard.flipped {
+	  transform: rotateY( 180deg );
+	}
+	.myCard .back, .myCard .front {
+	  margin: 0;
+	  display: block;
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  backface-visibility: hidden;
+	  background:white;
+	}
+}
+
